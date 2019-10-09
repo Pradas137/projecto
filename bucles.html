@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bucles</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" >
+
+		var gente = ["Saul", "Adrian", "Oscar", "Didac", "Mateo", "Paco", "Alba", "Ferran", "Ruben", "Almudena", "Rafa", "Andrew", "Alexis", "Roger", "Joel", "David" ];
+
+		var genteClon=gente.slice();
+
+		var grupoContador = 0;
+
+
+		function crearGrupo() {
+			var texto = " ";
+			grupoContador ++;
+			for (var i = 0; i < 3;  i ++) {
+				var indice=Math.floor(Math.random()*genteClon.length);
+				var nombre = genteClon[indice];
+				if (i == 0){
+					texto +="Grupo"+grupoContador+":"+nombre+", ";
+				}else if (i == 1){
+					texto += nombre + ", ";
+
+				}else if (i == 2){
+					texto += nombre + ".";
+				}
+				genteClon.splice(indice,1);
+
+			}
+
+			document.getElementById("grupo"+grupoContador).innerHTML = texto;
+
+		}
+
+		</script>
+	</head>
+	<body>
+
+		<button onclick="crearGrupo()">Crear</button>
+		<button onclick="reiniciar()">Reiniciar</button>
+		<h3 id ="grupo1"></h3>
+		<h3 id ="grupo2"></h3>
+		<h3 id ="grupo3"></h3>
+		<h3 id ="grupo4"></h3>
+		<h3 id ="grupo5"></h3>
+		<h3 id ="grupo6"></h3>
+		<h3 id ="grupo1"></h3>
+
+	</body>
+</html>

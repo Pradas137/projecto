@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+	<html>
+	    <head>
+	    <script type="text/javascript">
+
+	    var arraynombres=["Saul","Adrin","Mateo","Paco","Alba","Didac","Ferran","Ruben","Almuden","Oscar","Rafa","Andreu","Alexis","Roger","Joel","David"]
+	
+		var Total:Number = arraynombres.length;
+		for (i=0; i&lt;Total; i++) {
+			aleatorio = Math.floor(Math.random()*(arraynombres.length));
+			seleccion = arraynombres[aleatorio];
+			trace(seleccion);
+			arraynombres.splice(aleatorio, 1);
+		}
+	    </script>
+	    </head>
+	 	    <body onload="cargar_pagina()">
+	        <form>
+	            <input type="button" value="boton grupos!"/>
+	        </form>
+	    </body>
+	 
+	</html>

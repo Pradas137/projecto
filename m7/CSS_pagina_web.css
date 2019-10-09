@@ -1,0 +1,60 @@
+
+ #title{ text-align: center; font-size: 38px;font-style: italic; color: Yellow; padding: 10px; text-shadow: -1px -1px 0px #101010, 1px 1px 0px #505050;}
+
+
+
+
+/*Menu1*/
+
+body {font-family: sans-serif; background-color: Black; font-size: 14px;}
+#Menu1 {	text-align: center; padding: 3px 0px; border-bottom: 1px solid #778; font: bold 16px Verdana, sans-serif; }
+#MenuSubmenu li {list-style: none; display: inline; margin-left:10px;}
+#MenuSubmenu li a {padding: 3px 1em; border: 1px solid #778; border-bottom: none; background: #DDE; text-decoration: none; }
+
+
+
+/*Fin SubMenu*/
+
+
+/*Menu2*/	
+	#Menu2  {width: 200px; list-style: none; text-align: center; text-shadow: 2px 2px 4px red; padding:0;}
+	#Menu2  li {padding: 10px 0px; border: groove White; border-width: 6px 6px 0px 6px; background-color: #DDE; border-bottom: groove white; }
+	.caja-redes { margin: 0 auto; padding: 15px; position: relative; width: 100px; top:-300px; margin-top: -60px;}
+	.caja-redes a {text-align: center; font-size: 20px;}
+/*fin Menu2*/
+
+
+
+/*Footer*/
+footer {margin-left: 600px; color: Yellow; top:-300px; margin-top: 250px;}
+/*Fin Footer*/
+
+#pie{
+    border-top: 5px solid #333;
+    color: #fff;
+    font-size: 11px;
+    height: 25px;
+    line-height: 24px;
+    text-align: center;
+}
+ 
+form,p{
+    margin:0;
+}
+ 
+p{
+    /*Para que los elementos del cuerpo
+     * se separen entre ellos probar con
+     * 10px 20px                      */
+    padding-bottom: 5px;
+}
+ 
+/*Para separar el botón de ingresar*/
+p#bot{
+    padding-top: 10px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------*/

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bucles</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" >
+			document.addEventListener("DOMContentloaded",function(event){
+				var i = 0;
+				var contador=0;
+				var dado1 = 0;
+				var dado2 = 0;
+			 	for (i; i <= 99; i++) {
+			 		dado1 = Math.floor((Math.random()*6)+1);
+			 		document.getElementById("dado1").innerHTML +="dado1 " + dado1;
+
+			 		dado2 = Math.floor((Math.random()*6)+1);
+			 		document.getElementById("dado2").innerHTML +="dado1 " + dado2;
+
+			 		if (dado1 + dado2 == 10){
+			 			contador +=1;
+
+			 		}
+			 	}
+			 	document.getElementById("bucles").innerHTML +="resultado " + contador;
+		});
+		</script>
+	</head>
+	<body>
+		<a>hola</a>
+		<p id ="bucles"></p>
+		<p id ="dado1"></p>
+		<p id ="dado2"></p>
+		<p id ="resultadoSuma"></p>
+
+
+
+	</body>
+</html>

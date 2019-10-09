@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Ejemplo combinar php y html</title>
+	</head>
+    <body>
+    	
+    	<?php 
+    	echo sqrt(9);
+    	    	
+
+    	echo sqrt(10); 
+
+		?>
+    </body>
+</html>
