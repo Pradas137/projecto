@@ -1,0 +1,695 @@
+html, body {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.4vw;
+  color: #08B304;
+  overflow: hidden;
+}
+
+.background {
+  background-image: url("../resources/background_screen.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+}
+
+.hide, #rotate {
+  display: none;
+}
+.mymove{
+  animation: slidein 1s;
+}
+@keyframes slidein {
+  from {
+    margin-left: : 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.terminal {
+  margin-left: 25%;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: auto;
+  width: 50%;
+  padding: 2%;}
+
+#cursor {
+  flex-direction: column;
+  position: absolute;
+  bottom: -5%;
+}
+
+#cursor p {
+  height: auto;
+}
+
+#prompt-position {
+  flex-direction: column;
+  position: relative;
+}
+
+#prompt {
+  flex-direction: column;
+}
+
+#prompt-position p {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#header-container {
+  display: inline-block;
+  width: 100%;
+}
+ /*-----------------------------------------------------*/
+#title {
+  float: left;
+}
+
+#header-container span {
+    position:absolute;
+    right:0;
+    width:0;
+    background: #000501;
+    border-left: 1px solid #000;
+    animation: escribir 1s steps(30);
+}
+
+@keyframes escribir {
+    from { width: 80% }
+    to { width:0 }
+}
+
+@keyframes escribirt {
+    from { width: 80% }
+    to { width:0 }
+}
+.attemps {
+  display: inline-block;
+  width: 30%;
+}
+
+
+.attemps span {
+    position:absolute;
+    right:0;
+    width:20;
+    background: #000501;
+    border-left: 1px solid #000;
+    animation: escribirt 1s steps(30);
+}
+
+.enter {
+  display: inline-block;
+  width: 30%;
+}
+
+
+.enter span {
+    position:absolute;
+    right:0;
+    width:30;
+    background: #000501;
+    border-left: 1px solid #000;
+    animation: escribirt 1s steps(30);
+}
+/*-----------------------------------------------------*/
+
+#display-area {
+  margin-left: 17%;
+}
+
+#attempts, #title {
+  margin-bottom: 0%;
+  margin-top: 0;
+}
+
+.blink {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#root {
+  display: flex;
+}
+
+.col1 {
+  float: left;
+  width: 14%;
+  margin: 0;
+  order: 1;
+}
+
+.col2 {
+  float: left;
+  width: 23%;
+  margin: 0;
+  order: 2;
+}
+
+.col3 {
+  float: left;
+  width: 14%;
+  margin: 0;
+  order: 3;
+}
+
+.col4 {
+  float: right;
+  width: 23%;
+  margin: 0;
+  order: 4;
+}
+
+.input {
+  float: right;
+  order: 5;
+  width: 26%;
+  margin: 0;
+}
+
+.word:hover, .symbol:hover {
+  background-color: #08B304;
+  color: black;
+}
+
+#endPanel {
+  position: relative;
+}
+
+#rankigForm {
+  text-align: center;
+  margin-top: -90px;
+  padding: 0.8%;
+}
+
+#rankigForm input[type=text] {
+  border: 3px solid #08B304;
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+#rankigForm input[type=image] {
+  margin-top: 10px;
+  color: #08B304;
+  display: inline-block;
+}
+
+/* Responsive styles and media query */
+
+@media (orientation: portrait) {
+  #rotate {
+    display: block !important;
+    font-size: 5vh;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    padding: 4%;
+  }
+  #gamePanel, #winPanel, #losePanel {
+    display: none;
+  }
+  .background {
+    background: black;
+  }
+}
+
+@media only screen and (max-width: 1250px) and (min-width: 1150px) {
+  body {
+    font-size: 2.2vh;
+  }
+  .terminal {
+    margin-top: 10vw;
+    margin-left: 20%;
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1150px) and (min-width: 900px) {
+  body {
+    font-size: 2.5vh;
+  }
+  .terminal {
+    margin-top: 8vw;
+    margin-left: 18%;
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 800px) {
+  body {
+    font-size: 2.5vh;
+  }
+  .terminal {
+    margin-top: 12vw;
+    margin-left: 10%;
+    width: 85%;
+  }
+}
+
+#losePanel {
+  text-align: center;
+  margin-top: -0;
+  margin-left: 19%;
+}
+
+#winPanel {
+  text-align: center;
+  margin-top: 12%;
+  margin-left: 19%;
+}
+
+#rankigForm>img {
+    -webkit-animation: bounce-in-bck 1.1s both;
+            animation: bounce-in-bck 1.1s both;
+}
+
+#losePanel>img{
+  -webkit-animation: flicker-in-1 2s linear both;
+	        animation: flicker-in-1 2s linear both;
+}
+
+#losePanel input[type=text] {
+  border: 3px solid #08B304;
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+#losePanel input[type=image] {
+  margin-top: 10px;
+  color: #08B304;
+  display: inline-block;
+}
+
+.buttons {
+  margin-top: 4%;
+  display: inline-block;
+}
+
+.button {
+  background-color: #000501;
+  border: 1px solid #08B304;
+  color: #08B304;
+  text-align: center;
+  font-size: 1.25vw;
+  padding: 4%;
+  transition: all 0.5s;
+  cursor: pointer;
+  width: 100%;
+  margin: 5px;
+}
+
+.button:hover {
+  background-color: #08B304;
+  color: black;
+}
+
+/* Effect of an old-style screen display 
+https://gist.github.com/CodeMyUI/1d83fbd4904edd7021c06f8dfd0f14c9*/
+
+.screenEffect {
+  animation: colorPulse 6s infinite ease-in-out;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+}
+
+.screenEffect:before {
+  animation: wave 15s infinite ease-in-out;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.15;
+  position: absolute;
+  right: 0;
+}
+
+.screenEffect:after {
+  content: "";
+  left: 0;
+  pointer-events: none;
+}
+
+@keyframes colorPulse {
+  0%, 100% {
+    color: #08B304;
+  }
+  48%, 52% {
+    color: #005a00;
+  }
+  50% {
+    color: #013101;
+  }
+}
+
+@keyframes wave {
+  0% {
+    box-shadow: 0 -10vh 20vh #0c0;
+    top: -100vh;
+  }
+  48%, 52% {
+    box-shadow: 0 -10vh 20vh #090;
+  }
+  50% {
+    box-shadow: 0 -10vh 20vh #060;
+  }
+  100% {
+    box-shadow: 0 -10vh 20vh #0c0;
+    top: 200vh;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-10-23 23:30:57
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-bck
+ * ----------------------------------------
+ */
+ @-webkit-keyframes bounce-in-bck {
+  0% {
+    -webkit-transform: scale(7);
+            transform: scale(7);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: scale(1.24);
+            transform: scale(1.24);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  89% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes bounce-in-bck {
+  0% {
+    -webkit-transform: scale(7);
+            transform: scale(7);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: scale(1.24);
+            transform: scale(1.24);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  89% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2019-10-23 23:44:22
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * @animation flicker-in-1
+ * ----------------------------------------
+ */
+ @-webkit-keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+

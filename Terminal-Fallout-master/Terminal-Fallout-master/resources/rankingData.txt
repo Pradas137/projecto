@@ -1,0 +1,9 @@
+Pedro;1;9524
+Pepa;0;13183
+Juan;3;9393
+Juana;2;10805
+Carla;4;18147
+Carlos;2;6412
+Maria;0;6819
+Mariano;1;16045
+Ruben;1;7552
