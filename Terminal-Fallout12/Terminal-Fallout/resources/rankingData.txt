@@ -1,0 +1,9 @@
+Pedro;1;9524;hard
+Pepa;0;13183;easy
+Juan;3;9393;hard
+Juana;2;10805;normal
+Carla;4;18147;normal
+Carlos;2;6412;hard
+Maria;0;6819;easy
+Mariano;1;16045;easy
+adrian;0;7072;easy

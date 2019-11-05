@@ -1,0 +1,92 @@
+@import url("effects.css");
+@import url("settingsBar.css");
+@import url("colorBlindness.css");
+body {
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    color: #08B304;
+    font-size: 2.5vw;
+    margin-bottom: 3%;
+}
+
+table {
+    background: black;
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 75%;
+    text-align: right;
+    border: 2px solid green;
+    border-spacing: 0;
+    /* Add shadow */
+    -webkit-box-shadow: 24px 22px 7px 5px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 24px 22px 7px 5px rgba(0, 0, 0, 0.64);
+    box-shadow: 24px 22px 7px 5px rgba(0, 0, 0, 0.64);
+}
+
+tr>th {
+    color: #000501;
+    background-color: #08B304;
+    text-align: center;
+    border-bottom: 2px solid green;
+}
+
+td {
+    border-left: 1px solid green;
+    padding: 1%;
+    font-size: 1.8vw;
+}
+
+tr:hover, .button:hover {
+    color: #000501;
+    background-color: #08B304;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    -webkit-animation: vibrate-1 0.3s linear infinite both;
+    animation: vibrate-1 0.3s linear infinite both;
+}
+
+.button {
+    padding: 2%;
+    background-color: #000501;
+    border: 2px solid #08B304;
+    color: #08B304;
+    font-size: 2.5vw;
+    cursor: pointer;
+    width: 75%;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 10%;
+    /* Add shadow */
+    -webkit-box-shadow: 24px 22px 7px 5px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 24px 22px 7px 5px rgba(0, 0, 0, 0.64);
+    box-shadow: 24px 22px 7px 5px rgba(0, 0, 0, 0.64);
+}
+#highlight>td{
+    color: black;
+    background-color: white;
+    border-left: white;
+}
+
+#options {
+    top: 2%;
+    bottom: unset;
+}
+
+@media (orientation: portrait) {
+    body {
+        font-size: 2vh;
+    }
+    td {
+        font-size: 1.8vh;
+        padding: 2%;
+    }
+    .button {
+        font-size: 2.5vh;
+    }
+    #options>i {
+        font-size: 3vh;
+    }
+}

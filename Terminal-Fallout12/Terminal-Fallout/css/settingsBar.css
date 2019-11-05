@@ -1,0 +1,21 @@
+/* Settings bar */
+
+#options {
+    background: #213826;
+    position: absolute;
+    bottom: 2%;
+    right: 0%;
+    padding: 6px;
+    padding-right: 1.5%;
+    border-radius: 80 0px 0px 80;
+    -moz-border-radius: 80px 0px 0px 80px;
+    -webkit-border-radius: 80px 0px 0px 80px;
+    border: 4px inset #40752ce6;
+    border-right: 0;
+}
+
+#options>i {
+    padding-left: 8px;
+    cursor: pointer;
+    font-size: 2.5vw;
+}

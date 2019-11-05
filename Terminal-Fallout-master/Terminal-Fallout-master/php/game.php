@@ -12,22 +12,21 @@
     <div id="container" class="terminal">
       <div id="gamePanel" class="screenEffect">
         <div id="header-container">
-
-          <p id="title">ROBCO INDUSTRIES (TM) TERMINAL PROTOCOL<span>&nbsp;</span></p>
-          </div>
-          <p class ="enter">ENTER PASSWORD NOW<span>&nbsp;</span></p>
-          <output id="display-area">00:00.000</output>
-          <div id="attempts">
-          <p class= "attemps" >ATTEMPT(S) LEFT:<span>&nbsp;</span></p><span id="tries"></span>
+          <p id="title">ROBCO INDUSTRIES (TM) TERMINAL PROTOCOL</p>
         </div>
-
-
-        <div id="terminal" class="mymove" >
-           <p><?php require './stringDump.php';?>
+         <div id="header-container">
+        <p>ENTER PASSWORD NOW<
+        <output id="display-area">00:00.000</output></p>
+      </div>
+        <div id="attempts">
+          <p>ATTEMPT(S) LEFT: <span id="tries"></span></p>
+        </div>
+        <div id="terminal">
+            <?php require './stringDump.php';?>
               <div class="input" id="prompt-position">
                 <div id="prompt"></div>
                 <div id="cursor">
-                  <p></p><p class="blink">█</p></p>
+                  <p>></p><p class="blink">█</p>
                 </div>
               </div>
             </div>
@@ -35,12 +34,13 @@
       </div>
       <div id="winPanel" class="terminal hide">
           <div id="rankigForm" class="hide">
-              <img src="../resources/boy.jpg" alt="winBoy" width="85%">
+              <img src="../resources/boy.png" alt="winBoy" width="85%">
               <p>Enter your name to appear in the ranking</p>
-              <form action="../index.php" method="post">
+              <form action="./ranking.php" method="post">
                 <input type="text" name="name" required autofocus>
                 <input type="hidden"  name="failedAttempts" id="failedAttempts">
                 <input type="hidden" name="gameTime" id="gameTime">
+                <input type="hidden" name="gamemode" id="gamemode">
                 <input type="image" src="../resources/button.png" alt="submit" width="25%">
               </form>
             </div>
@@ -49,9 +49,9 @@
         <h3>Terminal blocked.</h3>
         <img src="../resources/nuclear_fungus.jpg" alt="nuclear fungus" width="75%">
         <div class="buttons">
-          <button onclick="window.location.reload()" class="button again" accesskey="P">Play Again</button><br>
-          <button onclick="window.location.href='../index.php'" class="button" accesskey="M">Menu</button>
-          <button onclick="window.location.href='./ranking.php'" class="button" accesskey="R">Ranking</button>
+          <button onclick="window.location.reload()" class="button again">Play Again</button><br>
+          <button onclick="window.location.href='../index.php'" class="button">Menu</button>
+          <button onclick="window.location.href='./ranking.php'" class="button">Ranking</button>
         </div>
       </div>
     </div>

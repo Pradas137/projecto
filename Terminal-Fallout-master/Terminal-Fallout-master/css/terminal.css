@@ -17,28 +17,15 @@ html, body {
 .hide, #rotate {
   display: none;
 }
-.mymove{
-  animation: slidein 1s;
-}
-@keyframes slidein {
-  from {
-    margin-left: : 100%;
-    width: 300%
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
 
 .terminal {
-  margin-left: 25%;
+  margin-left: 21%;
   margin-right: auto;
-  margin-top: 15px;
+  margin-top: 4.5vw;
   margin-bottom: auto;
   width: 50%;
-  padding: 2%;}
+  padding: 2%;
+}
 
 #cursor {
   flex-direction: column;
@@ -66,71 +53,97 @@ html, body {
 
 #header-container {
   display: inline-block;
-  width: 100%;
+  width: 80%;
 }
- /*-----------------------------------------------------*/
+
+#gamePanel > * {background: yellow;}
+
+
+#gamePanel > * > p {background: blue;}
+
+#header-container p {
+  color:#08B304;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid #000501; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 0; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+  typing 1s steps(30, end),
+  blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #000501 }
+}
+
 #title {
   float: left;
 }
 
-#header-container span {
-    position:absolute;
-    right:0;
-    width:0;
-    background: #000501;
-    border-left: 1px solid #000;
-    animation: escribir 1s steps(30);
-}
-
-@keyframes escribir {
-    from { width: 80% }
-    to { width:0 }
-}
-
-@keyframes escribirt {
-    from { width: 80% }
-    to { width:0 }
-}
-.attemps {
-  display: inline-block;
-  width: 30%;
-}
-
-
-.attemps span {
-    position:absolute;
-    right:0;
-    width:20;
-    background: #000501;
-    border-left: 1px solid #000;
-    animation: escribirt 1s steps(30);
-}
-
-.enter {
-  display: inline-block;
-  width: 30%;
-}
-
-
-.enter span {
-    position:absolute;
-    right:0;
-    width:30;
-    background: #000501;
-    border-left: 1px solid #000;
-    animation: escribirt 1s steps(30);
-}
-/*-----------------------------------------------------*/
-
 #display-area {
-  margin-left: 17%;
+  margin-left: 27%;
 }
 
 #attempts, #title {
-  margin-bottom: 0%;
+  margin-bottom: 2%;
   margin-top: 0;
 }
 
+#enter p{
+  color: #08B304;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid #000501; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 0; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+  typinge 1s steps(30, end),
+  blink-carete .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typinge {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-carete {
+  from, to { border-color: transparent }
+  50% { border-color: #000501 }
+}
+#attempts p {
+  color: #08B304;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid #000501; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 0; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+  typinge 1s steps(30, end),
+  blink-carete .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typinge {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-carete {
+  from, to { border-color: transparent }
+  50% { border-color: #000501 }
+}
 .blink {
   animation: blinker 1s step-start infinite;
 }
@@ -147,28 +160,28 @@ html, body {
 
 .col1 {
   float: left;
-  width: 14%;
+  width: 10%;
   margin: 0;
   order: 1;
 }
 
 .col2 {
   float: left;
-  width: 23%;
+  width: 20%;
   margin: 0;
   order: 2;
 }
 
 .col3 {
   float: left;
-  width: 14%;
+  width: 11%;
   margin: 0;
   order: 3;
 }
 
 .col4 {
   float: right;
-  width: 23%;
+  width: 17%;
   margin: 0;
   order: 4;
 }
@@ -176,7 +189,7 @@ html, body {
 .input {
   float: right;
   order: 5;
-  width: 26%;
+  width: 20%;
   margin: 0;
 }
 
@@ -232,9 +245,9 @@ html, body {
     font-size: 2.2vh;
   }
   .terminal {
-    margin-top: 10vw;
+    margin-top: 15vw;
     margin-left: 20%;
-    width: 55%;
+    width: 40%;
   }
 }
 
@@ -255,7 +268,7 @@ html, body {
   }
   .terminal {
     margin-top: 12vw;
-    margin-left: 10%;
+    margin-left: 7%;
     width: 85%;
   }
 }
@@ -273,13 +286,13 @@ html, body {
 }
 
 #rankigForm>img {
-    -webkit-animation: bounce-in-bck 1.1s both;
-            animation: bounce-in-bck 1.1s both;
+  -webkit-animation: bounce-in-bck 1.1s both;
+  animation: bounce-in-bck 1.1s both;
 }
 
-#losePanel>img{
+#losePanel>img {
   -webkit-animation: flicker-in-1 2s linear both;
-	        animation: flicker-in-1 2s linear both;
+  animation: flicker-in-1 2s linear both;
 }
 
 #losePanel input[type=text] {
@@ -385,110 +398,113 @@ https://gist.github.com/CodeMyUI/1d83fbd4904edd7021c06f8dfd0f14c9*/
  * animation bounce-in-bck
  * ----------------------------------------
  */
- @-webkit-keyframes bounce-in-bck {
+
+@-webkit-keyframes bounce-in-bck {
   0% {
     -webkit-transform: scale(7);
-            transform: scale(7);
+    transform: scale(7);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 0;
   }
   38% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     opacity: 1;
   }
   55% {
     -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   72% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   81% {
     -webkit-transform: scale(1.24);
-            transform: scale(1.24);
+    transform: scale(1.24);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   89% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   95% {
     -webkit-transform: scale(1.04);
-            transform: scale(1.04);
+    transform: scale(1.04);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
+
 @keyframes bounce-in-bck {
   0% {
     -webkit-transform: scale(7);
-            transform: scale(7);
+    transform: scale(7);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 0;
   }
   38% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
     opacity: 1;
   }
   55% {
     -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   72% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   81% {
     -webkit-transform: scale(1.24);
-            transform: scale(1.24);
+    transform: scale(1.24);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   89% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   95% {
     -webkit-transform: scale(1.04);
-            transform: scale(1.04);
+    transform: scale(1.04);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
+
 /* ----------------------------------------------
  * Generated by Animista on 2019-10-23 23:44:22
  * Licensed under FreeBSD License.
@@ -501,7 +517,8 @@ https://gist.github.com/CodeMyUI/1d83fbd4904edd7021c06f8dfd0f14c9*/
  * @animation flicker-in-1
  * ----------------------------------------
  */
- @-webkit-keyframes flicker-in-1 {
+
+@-webkit-keyframes flicker-in-1 {
   0% {
     opacity: 0;
   }
@@ -596,6 +613,7 @@ https://gist.github.com/CodeMyUI/1d83fbd4904edd7021c06f8dfd0f14c9*/
     opacity: 1;
   }
 }
+
 @keyframes flicker-in-1 {
   0% {
     opacity: 0;
@@ -692,4 +710,12 @@ https://gist.github.com/CodeMyUI/1d83fbd4904edd7021c06f8dfd0f14c9*/
   }
 }
 
+/* Test only */
 
+.word {
+  color: yellow;
+}
+
+.symbol {
+  color: red;
+}

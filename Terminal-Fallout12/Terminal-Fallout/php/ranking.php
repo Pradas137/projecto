@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/ranking.css">
+    <script src="../js/ranking.js"></script>
     <title>Ranking</title>
 </head>
 
@@ -38,20 +40,34 @@
             });
             $rankingByTime[$i] = $subArray;
         }
-
+        //Check if have all the needed paramethers in the post 
+        $requiredPost = ['name', 'failedAttempts', 'gameTime'];
+        $missing = false;
+        foreach ($requiredPost as $key) {
+            if (!isset($_POST[$key])) {
+                $missing = true;
+            }
+        }
         //prints $rankingByAttempts like a table
         $index = 1;
         foreach ($rankingByTime as $array) {
             foreach ($array as  $att) {
                 $time = intval($att[2]) / 1000;
-                echo "<tr><td>" . $index . "</td><td>" . $att[0] . "</td><td>" . $att[1] . "</td><td>" . $time . "</tr>";
+                if (!$missing and $_POST["name"] == $att[0] and $_POST["failedAttempts"] == $att[1] and ($_POST["gameTime"] == $att[2])) {
+                    echo "<tr id=highlight><td>" . $index . "</td><td>" . $att[0] . "</td><td>" . $att[1] . "</td><td>" . $time . "</tr>";
+                } else {
+                    echo "<tr><td>" . $index . "</td><td>" . $att[0] . "</td><td>" . $att[1] . "</td><td>" . $time . "</tr>";
+                }
                 $index++;
             }
         }
         ?>
     </table>
-    <div class="buttonContainer">
-        <button onclick="window.location.href='../index.php'" class="button" accesskey="M">Menu</button>
+    <div class="buttons">
+        <button onclick="window.location.href='../index.php'" class="button" accesskey="m">Menu</button>
+    </div>
+    <div id="options">
+        <i id="colorBlindness" class="material-icons off"> visibility_off </i>
     </div>
 
 </body>
